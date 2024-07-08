@@ -1,0 +1,163 @@
+@import url('https://fonts.cdnfonts.com/css/horror-type');
+@import url('https://fonts.cdnfonts.com/css/horror');
+
+
+.container {
+    max-width: 800px; /* Largeur maximale du contenu pour centrer la page */
+    margin: 0 auto; /* Centrer le contenu horizontalement */
+    padding: 20px; /* Espacement intérieur */
+}
+body {
+    background-color: #797544 !important; /* Couleur de fond rouge pour tout le body */
+    color: white !important; /* Couleur du texte en blanc pour un meilleur contraste */
+    font-family: Arial, sans-serif; /* Police par défaut pour le texte */
+}
+
+/* ==========TITRE========== */
+.mainTitle {
+    font-family: 'Horror type',sans-serif;
+    font-size: 5rem;
+    text-align: center;
+    border-bottom: 5px solid #3f2107;
+    border-top: 5px solid #3f2107;
+}
+.imageTitle{
+    width: 80px;
+    height: 80px;
+    max-width: 100%;
+    height: auto;
+
+}
+.align-items-center {
+    display: flex; /* Utilisation de flexbox pour aligner les éléments */
+    align-items: center; /* Alignement vertical des éléments au centre */
+    justify-content: center; /* Alignement horizontal des éléments au centre */
+    text-align: center;
+}
+
+h3{
+    font-family: 'Horror', sans-serif !important;
+
+}
+
+/* ==========RECHERCHE(input)========== */
+
+.recherche {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Espacement en bas pour séparation */
+}
+
+.recherche input[type="text"] {
+    font-size: 1.5rem; /* Taille de police personnalisée */
+    padding: 8px 12px; /* Espacement intérieur */
+    border-radius: 8px; /* Bord arrondi */
+    text-align: center;
+    color: white;
+    background-color: #797544;
+    border: 2px solid #3f2107;
+    width: 430px; /* Largeur personnalisée */
+    box-sizing: border-box; /* Inclure la bordure et le padding dans la largeur totale */
+    outline: none; /* Supprimer le contour par défaut lorsqu'il est activé */
+}
+
+.recherche input[type="text"]::placeholder {
+    color: white;
+    opacity: 0.6; /* Opacité du texte de l'indicateur de champ */
+}
+
+.recherche input[type="text"]:focus {
+    border-color: #3f2107; /* Couleur de la bordure lorsqu'il est activé */
+    box-shadow: 0 0 5px 2px #3f2107; /* Ombre de la bordure lorsqu'il est activé */
+}
+
+
+.search{
+    
+    background-color: #797544 !important;
+    color: white;
+    border:2px solid #3f2107 !important;
+}
+.search::placeholder {
+    color: white !important;
+    box-shadow: #3f2107 !important;
+}
+input#searchInput.search:focus::placeholder {
+    color: #666 !important; /* Nouvelle couleur du placeholder lorsqu'il est actif */
+}
+input#searchInput:focus {
+    box-shadow: 0 0 5px 2px #3f2107; /* Change this color to your desired color */
+    outline: none; /* Optionally remove the default outline */
+}
+
+
+/* ==========TABLEAU========== */
+thead{
+    border-radius: 20px;
+}
+#booksTable {
+    width: 100%;
+    border-collapse: collapse; /* Fusionner les bordures des cellules */
+    border-radius: 20px; /* Arrondir les coins du tableau */
+    overflow: hidden; /* Assure que le débordement ne déforme pas les coins arrondis */
+}
+
+#booksTable th,
+#booksTable td {
+    border: 3px solid #3f2107;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Zoom au survol des cellules */
+#booksTable tbody tr:hover {
+    transform: scale(1.009); /* Zoom de 110% */
+    transition: transform 0.3s ease; /* Transition fluide */
+    background-color: #646036;
+    overflow: hidden;
+}
+
+
+
+/* ==========MODAL========== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4) ;
+}
+
+.modal-content {
+    background-color: #3f2107 !important;
+    color: white !important;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/* ===Titre modal(nom du livre)=== */
+.modal-title {
+    display: inline-block;
+    padding: 10px; 
+    border: 2px solid white ;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Horror', sans-serif ;
+}
+.modal-title-container {
+    display: flex;
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement */
+    margin-top: 10px; /* Ajustez le margin selon vos besoins */
+}
+
